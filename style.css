@@ -77,6 +77,10 @@ img:hover{
     color: var(--OffBlack);
     padding: 7px 0px 7px 7px;
 }
+input::placeholder{
+    font-weight: 400;
+    font-size: 18px;
+}
 .inputs .input{
     border: .1px solid var(--OffBlack);
     border-radius: 3px;
@@ -131,7 +135,7 @@ h1 .output_year, .output_month, .output_day, .output_totalDay{
         position: relative;
         max-width: 50px;
         top: -25px;
-        left: 45%;
+        left: 42%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -168,7 +172,7 @@ h1 .output_year, .output_month, .output_day, .output_totalDay{
     }
     .container .inputs{
         width: 200px;
-        gap: 5px;
+        gap: 7px;
         padding-right: 0px;
         padding-bottom: 40px;
     }
