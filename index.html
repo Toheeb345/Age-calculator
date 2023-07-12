@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="inputs">
+    <div class="day">
+      <label for="">Day</label>
+      <div class="input"><input class="input_day" type="number" placeholder="DD"></div>
+      <p class="day_err">Must be a valid day</p>
+    </div>
+    <div class="month">
+      <label for="">Month</label>
+      <div class="input"><input type="number" class="input_month" placeholder="MM"></div>
+      <p class="month_err">Must be a valid month</p>
+    </div>
+    <div class="year">
+      <label for="">Year</label>
+      <div class="input"><input type="number" class="input_year" placeholder="YYYY"></div>
+      <p class="year_err">Must be in the past</p>
+    </div>
+  </div>
+
+  <div class="arrow">
+    <img src="./assets/images/icon-arrow.svg" alt="">
+  </div>
+
+  <div class="output">
+    <h1><span class="output_year">--</span> <span class="y">Years</span></h1>
+    <h1><span class="output_month">--</span> <span class="m">Months</span> </h1>
+    <h1><span class="output_day">--</span> <span class="d">Days</span></h1>
+    <h1 class="output_total">A total of <span class="output_totalDay">---</span> <span class="ld">Days</span></h1>
+  </div>
+
+</div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

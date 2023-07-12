@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Purple: hsl(259, 100%, 65%);
+    --fadedPurple: hsla(260, 42%, 60%, 0.803);
+    --LightRed: hsl(0, 100%, 67%);
+    /* --LightRed: ; */
+    --White: hsl(0, 0%, 100%);
+    --OffWhite: hsl(0, 0%, 94%);
+    --LightGrey: hsl(0, 0%, 86%);
+    --SmokeyGrey: hsl(0, 1%, 44%);
+    --OffBlack: hsl(0, 0%, 8%);
+}
+body{
+    background-color: var(--OffWhite);
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--White);
+    /* width: 600px; */
+    padding: 3% 40px;
+    border-radius: 10px 10px 100px 10px;
+    box-shadow: 0px 0px 10px 5px #1e077d2c;
+}
+.container .inputs{
+    display: flex;
+    gap: 20px;
+    width: 500px;
+    border-bottom: 1px solid var(--SmokeyGrey);
+    padding-bottom: 20px;
+    /* justify-content: space-around; */
+}
+.arrow img{
+    background-color: var(--Purple);
+    border-radius: 50%;
+    padding: 10px;
+    position: relative;
+    top: -35px;
+    right: -90%;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease-in;
+    cursor: pointer;
+}
+img:hover{
+    background-color: black;
+}
+.inputs label{
+    font-weight: 600;
+    color: var(--SmokeyGrey);
+}
+.day, .month, .year{
+    display: flex;
+    flex-direction: column;
+    border: 0px;
+}
+.inputs input{
+    width: 100px;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--OffBlack);
+    padding: 7px 0px 7px 7px;
+}
+.inputs .input{
+    border: .1px solid var(--OffBlack);
+    border-radius: 3px;
+}
+.day_err{
+    font-size: 11px;
+    color: var(--LightRed);
+    display: none;
+}
+.month_err{
+    font-size: 11px;
+    color: var(--LightRed);
+    display: none;
+}
+.year_err{
+    font-size: 11px;
+    color: var(--LightRed);
+    display: none;
+}
+.output{
+    padding-top: 20px;
+}
+.output h1{
+    font-size: 60px;
+    font-style: italic;
+}
+.output h1:last-child{
+    padding-top: 30px;
+    text-align: right;
+    font-size: 30px;
+    display: none;
+}
+h1 .output_year, .output_month, .output_day, .output_totalDay{
+    color: var(--Purple);
+}
+
+
+@media only screen and (max-width: 600px){
+    .container{
+        width: 300px;
+        padding-left: 20px;
+        padding-right: 20px;
+        /* height: 400px; */
+    }
+    .container .inputs{
+        width: 260px;
+        gap: 10px;
+        padding-right: 0px;
+        padding-bottom: 60px;
+    }
+    .arrow img{
+        position: relative;
+        max-width: 50px;
+        top: -25px;
+        left: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* transform: translate(-60px, 2px); */
+        /* margin: 0 auto; */
+    }
+    .output h1{
+        font-size: 40px;
+    }
+    .inputs input{
+        width: 80px;
+        padding: 0 5px;
+    }
+    .output{
+        padding-top: 45px;
+    }
+    .output h1:last-child{
+        text-align: center;
+        padding-top: 20px;
+        font-size: 20px;
+        display: none;
+    }
+    .day_err, .month_err, .year_err{
+        font-size: 9px;
+    }
+} 
+
+@media only screen and (max-width: 330px){
+    .container{
+        width: 250px;
+        padding-left: 20px;
+        padding-right: 20px;
+        /* height: 400px; */
+    }
+    .container .inputs{
+        width: 200px;
+        gap: 5px;
+        padding-right: 0px;
+        padding-bottom: 40px;
+    }
+    .inputs input{
+        width: 62px;
+        padding: 0 5px;
+    }
+    .arrow img{
+        position: relative;
+        max-width: 50px;
+        top: -25px;
+        left: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .output h1{
+        font-size: 30px;
+    }
+    .output h1:last-child{
+        text-align: left;
+        padding-top: 15px;
+        font-size: 15px;
+        display: none;
+    }
+}
