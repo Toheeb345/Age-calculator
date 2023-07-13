@@ -103,7 +103,17 @@ function day() {
     total_Day_Display.style.display = "none";
   }
     else{
-      outputDay.textContent = ageDays;
+      let output = 0;
+      const timer = setInterval(() => {
+        outputDay.textContent = output;
+         if( output === ageDays ){
+            clearInterval(timer);
+         }else{
+           output++;
+         }
+        }, 20);
+
+      // outputDay.textContent = ageDays;
       total_Day_Display.style.display = "block";
     }
     
@@ -153,7 +163,17 @@ function month() {
       total_Day_Display.style.display = "none";
     }
     else{
-      outputMonth.textContent = ageMonths;
+      let output = 0;
+      const timer = setInterval(() => {
+        outputMonth.textContent = output;
+         if( output === ageMonths ){
+            clearInterval(timer);
+         }else{
+           output++;
+         }
+        }, 20);
+
+      // outputMonth.textContent = ageMonths;
       total_Day_Display.style.display = "block";
     }
 }
