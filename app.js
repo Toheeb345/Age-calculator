@@ -210,7 +210,7 @@ function year() {
          }else{
            output++;
          }
-        }, 10);
+        }, 20);
 
       total_Day_Display.style.display = "block"
     }
@@ -223,15 +223,7 @@ function daySet(){
     totalDay.textContent = `0`;
   }
   else{
-    let output = 0;
-    const timer = setInterval(() => {
-      totalDay.textContent = output;
-       if( output >= ageInDays ){
-          clearInterval(timer);
-       }else{
-         output += 100;
-       }
-      }, 20);
+      totalDay.textContent = ageInDays;
   }
 }
 
